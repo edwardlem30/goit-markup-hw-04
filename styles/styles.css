@@ -66,11 +66,12 @@ h3 {margin-bottom: 10px;}
 {
     display: flex;
     text-align: left;
-    flex-direction: column;
+    /* flex-direction: column; */
 }
 .list-contact 
 {
     display: flex;
+    justify-content: center;
     padding: 0;}
 .header-item, .contact-link, .contact-tel 
 {
@@ -79,7 +80,7 @@ h3 {margin-bottom: 10px;}
 }
 .item>.link 
 {
-    padding: 8px;
+    padding: 4px;
 }
 
 /* logo */
@@ -147,26 +148,36 @@ h3 {margin-bottom: 10px;}
 {
     color: var(--primary-txt-color);
 }
-
+.contact-link .link,
+.contact-tel .link 
+{
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    background-color: transparent;
+    
+}
 .link 
 {
     display: flex;
     padding-top: 32px;
     padding-bottom: 32px;
-
     font-style: normal;
-    font-size: 14px;
+    font-size: 16px;
     letter-spacing: 0.02em;
     line-height: 1.71;
     text-decoration: none;
+    
 }
 
 .icon {
-    display: inline-block;
+    display: flex;
     width: 16px;
     height: 12px;
+    
     fill: currentColor;
     stroke: #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .link-map
@@ -275,6 +286,8 @@ h3 {margin-bottom: 10px;}
     padding-bottom: 94px;
 }
 
+.section-img
+
 .section-title 
 {
     font-weight: 700;
@@ -326,6 +339,47 @@ h3 {margin-bottom: 10px;}
     color: var(--primary-txt-color);
 }
 
+/* посилання на соцмережі */
+.social-media-list 
+{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 10px;
+    padding-left: 0;
+}
+
+/* .social-media-item:not(:last-child) {
+    margin-right: 10px;
+} */
+.social-media-link 
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    color:var(--subtitle-txt);
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.social-media-link:hover,
+.social-media-link:focus
+{
+    background-color: var(--accent-txt-color);
+    fill: #fff;
+}
+
+.visit
+{
+    display: flex;
+    align-items: center;
+    
+    text-transform: uppercase;
+    color: var(--bcg-color);
+}
+
 .section-list, .work-list, 
 .command-list, .header-list, 
 .filter-list, .card-list, .list 
@@ -371,7 +425,7 @@ h3 {margin-bottom: 10px;}
 .header-list 
 {
     margin-left: 93px;
-    margin-right: 331px;}
+    margin-right: auto;}
 .list-contact .contact-link + .contact-tel 
 {
     margin-left: 50px;
