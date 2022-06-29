@@ -177,13 +177,8 @@ h3 {margin-bottom: 10px;}
 }
 
 .icon {
-    display: flex;
-    width: 16px;
-    height: 12px;
     
-    fill: currentColor;
-    stroke: #000000;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-right: 10px;
 }
 
 .link-map
@@ -205,6 +200,7 @@ h3 {margin-bottom: 10px;}
 
 .link:hover, .link:focus, .link-map:hover, .link-map:focus
 {  color: var(--accent-txt-color);
+    fill: currentColor;
 }
 /* Block Hero */
 .hero 
@@ -278,6 +274,7 @@ h3 {margin-bottom: 10px;}
     align-items: center;
     width: 270px;
     height: 120px;
+    margin-bottom: 30px;
     background-color: #F5F4FA;
 }
 
@@ -302,19 +299,26 @@ h3 {margin-bottom: 10px;}
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
+    text-transform: capitalize;
     color: var(--subtitle-txt);
 }
 
+.client-title
+{
+    text-transform: uppercase;
+    font-size: 36px;
+}
 .section 
 {
     padding-top: 94px;
     padding-bottom: 94px;
 }
 
-.section-img
+
 
 .section-title 
 {
+    
     font-weight: 700;
     line-height: 1.14;
     text-transform: uppercase;
@@ -325,6 +329,7 @@ h3 {margin-bottom: 10px;}
     display: block;
     text-align: left;
     max-width: 270px;
+    
 }
 .section-item:not(:first-child) {
     margin-left: 30px;
@@ -362,8 +367,9 @@ h3 {margin-bottom: 10px;}
     text-transform: capitalize;
     color: var(--subtitle-txt);
 }
-.command-item>.text 
+.command-item .text 
 {
+    margin-bottom: 16px;
     font-size: 16px;
     line-height: 1.19;
     color: var(--primary-txt-color);
@@ -392,16 +398,18 @@ h3 {margin-bottom: 10px;}
     border-radius: 50%;
 }
 
-.social-media-icon:hover,
-.social-media-icon:focus
+.social-media-link:hover,
+.social-media-link:focus
 {
     background-color: var(--accent-txt-color);
     fill: #fff;
+    border-radius: 50%;
 }
 
 .social-media-icon
 {
     color: currentColor;
+    
 }
 
 .social-media-link-visit {
@@ -428,9 +436,17 @@ h3 {margin-bottom: 10px;}
     align-items: baseline;
     max-width: 200px;
     margin-left: 70px;
-    text-transform: uppercase;
+    
     color: var(--bcg-color);
 }
+
+.visit-join 
+{
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: var(--main-font-size);
+}
+
 
 .section-list, .work-list, 
 .command-list, .header-list, 
@@ -501,38 +517,12 @@ h3 {margin-bottom: 10px;}
 
 /* Постоянные клиенты */
 .client-icons {
-    display: flex;
-    flex-direction: column;
-    padding-top: 94px;
-    padding-right: 215px;
-    padding-bottom: 94px;
-    padding-left: 215px;
-    margin-left: auto;
-    margin-right: auto;
-
-    text-align: center;
-    text-transform: capitalize;
-    text-align: center;
-
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 42px;
-    
-    letter-spacing: 0.03em;
+    padding: 94px 0;
 }
 
 .client-icon {
-    display: block;
-    width: 170px;
-    height: 92px;
+    
     color: #AFB1B8;
-    stroke-width: 1px solid;
-    stroke: #AFB1B8; 
-    outline: 1px solid;
-    border-radius: 2px;
-
     cursor: pointer;
 }
 .client-icon:hover,
@@ -552,12 +542,23 @@ h3 {margin-bottom: 10px;}
     display: flex;
     justify-content: space-between;
     list-style: none;
+    padding: 0;
 }
 
 .client-item
 {
-    width: 170px;
+    width: calc(100% / 6 - 30px);
     height: 92px;
+}
+
+.client-link
+{
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+    
+    border: 1px #AFB1B8;
+    border-radius: 2px;
 }
 
 /* Filter on page two */
@@ -581,7 +582,7 @@ h3 {margin-bottom: 10px;}
 
 .filter-btn,
 .card-title .ignor,
-.card-text .ignor, .client-icons .ignor
+.card-text .ignor, .client-icons .ignor, .command-title
 {
     text-transform: none;
 }
