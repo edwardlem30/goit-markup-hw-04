@@ -212,8 +212,9 @@ h3 {margin-bottom: 10px;}
     padding-top: 200px;
     padding-bottom: 200px;
     background-color: var(--hero-bcg);
+    background-image: linear-gradient (to right, #2F303A 40%);
     background-image: url(../images/Img.png);
-    background-image: linear-gradient( to right, #2F303A 40%);
+    
 }
 .hero-title 
 {
@@ -315,11 +316,8 @@ h3 {margin-bottom: 10px;}
     padding-bottom: 94px;
 }
 
-
-
 .section-title 
 {
-    
     font-weight: 700;
     line-height: 1.14;
     text-transform: uppercase;
@@ -517,50 +515,57 @@ h3 {margin-bottom: 10px;}
 .list-contact {justify-content: flex-end;}
 
 /* Постоянные клиенты */
-.client-icons {
+
+.clients {
     padding: 94px 0;
 }
 
-.client-icon {
-    
-    color: #AFB1B8;
-    cursor: pointer;
-}
-.client-icon:hover,
-.client-icon:focus
-{
-    color: var(--accent-txt-color);
-    outline: 1px solid var(--accent-txt-color);
-}
-
-.client-icon
-{
-    fill: currentColor;
-}
-
-.clients-list
-{
+.client-list {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     list-style: none;
     padding: 0;
 }
 
-.client-item
-{
+.client-item {
+    
     width: calc(100% / 6 - 30px);
     height: 92px;
 }
 
-.client-link
+.client-item:not(:first-child)
 {
-    display: flexbox;
+    padding-left: 30px;
+}
+
+.client-link {
+    display: flex;
+    width: 100%;
+    height: 100%;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+
+    color: #AFB1B8;
     
-    border: 1px #AFB1B8;
-    border-radius: 2px;
 }
+
+.client-link:hover,
+.client-link:focus {
+    color: var(--accent-txt-color);
+    border: 1px solid var(--accent-txt-color);
+}
+
+.client-icon
+{
+    width: 106px;
+    height: 60px;
+    fill: currentColor;
+}
+
 
 /* Filter on page two */
 .filter-list, .header-list
@@ -583,7 +588,7 @@ h3 {margin-bottom: 10px;}
 
 .filter-btn,
 .card-title .ignor,
-.card-text .ignor, .client-icons .ignor, .command-title
+.card-text .ignor, .command-title
 {
     text-transform: none;
 }
